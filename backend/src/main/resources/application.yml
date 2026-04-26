@@ -1,0 +1,22 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: charging-station
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+
+logging:
+  level:
+    com.charging: DEBUG
+    org.springframework.web: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
